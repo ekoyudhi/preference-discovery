@@ -1,0 +1,18 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Hasil Seluruh Ronde
+{% endblock %}
+
+{% block content %}
+
+    Terima kasih atas partisipasi Anda. Total poin yang Anda kumpulkan adalah sebanyak <b>{{payoff_selected}}.</b>
+    <br>
+    Perhitungan uang yang didapatkan = <b>({{payoff_selected}} x Rp 1.000) + Rp 10.000 = Rp {{payoff_selected_rupiah}}</b>
+    <br>
+    Anda dipersilakan untuk meninggalkan ruangan ini. Silakan tukarkan kartu peserta Anda dengan pembayaran.
+
+{% endblock %}
+
+
