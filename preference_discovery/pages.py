@@ -8,6 +8,7 @@ class No1Introduction(Page):
 
     def before_next_page(self):
         self.player.sequence_setup()
+        self.participant.vars['payoff_round_all'] = 0
 
 class No2Instructions1(Page):
 
