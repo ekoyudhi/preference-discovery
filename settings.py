@@ -31,7 +31,15 @@ LANGUAGE_CODE = 'en'
 REAL_WORLD_CURRENCY_CODE = 'USD'
 USE_POINTS = True
 
-ROOMS = []
+ROOMS = [
+    dict(
+        name='econ101',
+        display_name='Econ 101 class',
+        participant_label_file='_rooms/econ101.txt',
+        use_secure_urls=True
+    ),
+    dict(name='live_demo', display_name='Room for live demo'),
+]
 
 ADMIN_USERNAME = 'admin'
 # for security, best to set admin password in an environment variable
