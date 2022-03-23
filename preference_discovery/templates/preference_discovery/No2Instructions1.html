@@ -7,12 +7,12 @@
 
 {% block content %}
 
-Selamat datang dan terima kasih telah bersedia untuk mengikuti eksperimen ini. Mohon dibaca dengan seksama seluruh instruksi
+Terima kasih dan selamat datang telah bersedia untuk mengikuti eksperimen ini. Mohon baca dengan seksama seluruh instruksi
 agar Anda dapat memahami apa yang harus Anda lakukan di dalam eksperimen ini. Eksperimen ini memberikan Anda kesempatan
 untuk memperoleh uang tunai yang akan dibayarkan segera setelah Anda menyelesaikan rangkaian eksperimen ini. Besaran uang
 yang akan Anda peroleh bergantung pada apa yang Anda lakukan di dalam eksperimen ini. Oleh karenanya, mohon untuk serius
-dalam menyelesaikannya sesuai dengan preferensi Anda. Uang yang Anda peroleh dalam eksperimen ini akan ditambahkan dengan
-uang kehadiran sebesar Rp{{show_up_fee}}.
+dalam menyelesaikan eksperimen ini sesuai dengan preferensi Anda. Uang yang Anda peroleh dalam eksperimen ini akan ditambahkan
+dengan uang kehadiran sebesar Rp{{show_up_fee}}.
 
 <br>
 <br>
@@ -37,26 +37,28 @@ setiap ronde di dalam blok tertentu.
 <thead>
   <tr>
     <th class="tg-bx42">&nbsp;&nbsp;&nbsp;<br>Blok, Ronde, dan Token.&nbsp;&nbsp;&nbsp;</th>
-    <th class="tg-wo29">&nbsp;&nbsp;&nbsp;<br>Anda akan bermain dalam 3 blok dimana&nbsp;&nbsp;masing-masing blok akan berisi 10/20 ronde. Pada masing-masing ronde,&nbsp;&nbsp;&nbsp;Anda mendapatkan 3/6 token untuk dialokasikan ke dalam pilihan yang&nbsp;&nbsp;&nbsp;tersedia. Terdapat 5 pilihan yang tersedia di masing-masing ronde. Anda harus&nbsp;&nbsp;&nbsp;mengalokasikan semua token tersebut, setidaknya, ke salah satu pilihan yang&nbsp;&nbsp;&nbsp;tersedia untuk memperoleh poin berdasarkan outcome dari&nbsp;&nbsp;&nbsp;alternatif yang Anda alokasikan token. Jika tidak menukarkannya, maka Anda&nbsp;&nbsp;&nbsp;tidak akan mendapatkan poin dari token di ronde tersebut.&nbsp;&nbsp;&nbsp;</th>
+    <th class="tg-wo29">&nbsp;&nbsp;&nbsp;<br>Anda akan bermain dalam 3 blok dimana masing-masing blok akan berisi 10 ronde. Pada masing-masing ronde, Anda mendapatkan 3 token untuk dialokasikan ke dalam pilihan yang tersedia. Terdapat 5 pilihan yang tersedia di masing-masing ronde. Anda harus mengalokasikan semua token tersebut, setidaknya, ke salah satu pilihan yang tersedia untuk memperoleh poin berdasarkan outcome dari alternatif yang Anda alokasikan token. Jika tidak menukarkannya, maka Anda tidak akan mendapatkan poin dari token di ronde tersebut.&nbsp;&nbsp;&nbsp;</th>
   </tr>
 </thead>
 <tbody>
   <tr>
     <td class="tg-bx42">&nbsp;&nbsp;&nbsp;<br>Alternatif Pilihan dan Outcome-nya.&nbsp;&nbsp;&nbsp;</td>
-    <td class="tg-wo29">&nbsp;&nbsp;&nbsp;<br>Terdapat 21 alternatif pilihan yang tersedia di&nbsp;&nbsp;&nbsp;masing-masing blok dimana Anda akan menghadapi 5 alternatif pilihan yang&nbsp;&nbsp;&nbsp;berbeda di masing-masing ronde. Kami menamai alternatif tersebut dengan ‘Alternatif&nbsp;&nbsp;&nbsp;1’ sampai ‘Alternatif 21’. Ke-21 alternatif pilihan tersebut&nbsp;&nbsp;&nbsp;berisi: 20 alternatif dengan 2 outcome (probabilistik), dan 1&nbsp;&nbsp;&nbsp;alternatif dengan 1 outcome (pasti). Pada Blok 1, kelima&nbsp;&nbsp;&nbsp;alternatif di setiap ronde akan diambil secara acak dari 21 alternatif yang&nbsp;&nbsp;&nbsp;ada melalui distribusi seragam. Pada Blok 2 dan Blok 3, empat&nbsp;&nbsp;&nbsp;alternatif probabilistik akan diambil secara acak dari 20 alternatif&nbsp;&nbsp;&nbsp;probabilistik yang ada melalui distribusi seragam ditambah satu alternatif&nbsp;&nbsp;&nbsp;pasti. Masing-masing outcome pada alternatif probabilistik memiliki&nbsp;&nbsp;&nbsp;probabilitas untuk menjadi poin bagi Anda ketika memilihnya.&nbsp;&nbsp;&nbsp;</td>
+    <td class="tg-wo29">&nbsp;&nbsp;&nbsp;<br>Terdapat 21 alternatif pilihan yang tersedia di masing-masing blok dimana Anda akan menghadapi 5 alternatif pilihan yang berbeda di masing-masing ronde. Kami menamai alternatif tersebut dengan ‘Alternatif_1’ sampai ‘Alternatif_21’. Ke-21 alternatif pilihan tersebut berisi: 20 alternatif dengan 2 outcomes (probabilistik), dan 1 alternatif dengan 1 outcome (pasti). Pada Blok 1, kelima alternatif di setiap ronde akan diambil secara acak dari 21 alternatif yang ada melalui distribusi seragam. Pada Blok 2 dan Blok 3, empat alternatif probabilistik akan diambil secara acak dari 20 alternatif probabilistik yang ada melalui distribusi seragam ditambah satu alternatif pasti (Alternatif_21). Masing-masing outcome pada alternatif probabilistik memiliki probabilitas untuk menjadi poin bagi Anda ketika memilihnya.&nbsp;&nbsp;&nbsp;</td>
   </tr>
   <tr>
-    <td class="tg-bx42">&nbsp;&nbsp;&nbsp;<br>Ketika Anda mengalokasikan token pada sebuah&nbsp;&nbsp;&nbsp;alternatif.&nbsp;&nbsp;&nbsp;</td>
-    <td class="tg-wo29">&nbsp;&nbsp;&nbsp;<br>Jika Anda mengalokasikan token pada alternatif pasti&nbsp;&nbsp;&nbsp;(yang berisi 1 outcome) maka Anda akan mendapatkan poin yang tertulis&nbsp;&nbsp;&nbsp;pada outcome tersebut. Jika Anda mengalokasikan token pada alternatif&nbsp;&nbsp;&nbsp;probabilistik (yang berisi 2 outcome) maka poin yang Anda dapatkan bergantung&nbsp;&nbsp;&nbsp;dari acakan yang dilakukan oleh sistem mengacu pada probabilitas di&nbsp;&nbsp;&nbsp;alternatif tersebut. Outcome yang muncul akan menjadi poin yang Anda&nbsp;&nbsp;&nbsp;peroleh pada ronde tersebut. Anda akan mengetahui outcome yang menjadi&nbsp;&nbsp;&nbsp;poin Anda tersebut (dan juga poin dari alternatif pasti jika Anda juga&nbsp;&nbsp;&nbsp;memilihnya) setelah satu ronde tersebut selesai. Poin yang Anda dapatkan merupakan&nbsp;&nbsp;&nbsp;perkalian dari token yang Anda alokasikan dan outcome yang Anda&nbsp;&nbsp;&nbsp;peroleh.&nbsp;&nbsp;&nbsp;</td>
+    <td class="tg-bx42">&nbsp;&nbsp;&nbsp;<br>Ketika Anda mengalokasikan token pada sebuah alternatif.&nbsp;&nbsp;&nbsp;</td>
+    <td class="tg-wo29">&nbsp;&nbsp;&nbsp;<br>Jika Anda mengalokasikan token pada alternatif pasti (yang berisi 1 outcome) maka Anda akan mendapatkan poin yang tertulis pada outcome tersebut. Jika Anda mengalokasikan token pada alternatif probabilistik (yang berisi 2 outcome) maka poin yang Anda dapatkan bergantung dari acakan yang dilakukan oleh sistem mengacu pada probabilitas di alternatif tersebut. Outcome yang muncul akan menjadi poin yang Anda peroleh pada ronde tersebut. Anda akan mengetahui outcome yang menjadi poin Anda tersebut (dan juga poin dari alternatif pasti jika Anda juga memilihnya) setelah satu ronde tersebut selesai. Poin yang Anda dapatkan merupakan perkalian dari token yang Anda alokasikan dan outcome yang Anda peroleh.&nbsp;&nbsp;&nbsp;</td>
   </tr>
   <tr>
     <td class="tg-bx42">&nbsp;&nbsp;&nbsp;<br>Apa yang terjadi pada ronde berikutnya?&nbsp;&nbsp;&nbsp;</td>
-    <td class="tg-wo29">&nbsp;&nbsp;&nbsp;<br>Ronde berikutnya tetap akan memberikan Anda 5&nbsp;&nbsp;&nbsp;alternatif pilihan sesuai dengan aturan pengacakan pada blok yang Anda&nbsp;&nbsp;&nbsp;mainkan. Namun alternatif probabilistik (2 outcome) yang telah Anda&nbsp;&nbsp;&nbsp;pilih akan menjadi alternatif pasti (1 outcome) karena Anda telah&nbsp;&nbsp;&nbsp;mengetahui outcome yang muncul.&nbsp;&nbsp;&nbsp;</td>
+    <td class="tg-wo29">&nbsp;&nbsp;&nbsp;<br>Ronde berikutnya tetap akan memberikan Anda 5 alternatif pilihan sesuai dengan aturan pengacakan pada blok yang Anda mainkan. Namun alternatif probabilistik (2 outcome) yang telah Anda pilih akan menjadi alternatif pasti (1 outcome) karena Anda telah mengetahui outcome yang muncul.&nbsp;&nbsp;&nbsp;</td>
   </tr>
 </tbody>
 </table>
 
-<br>Tekan tombol 'Lanjut' jika Anda sudah memahami instruksi di atas. </br>
+<br>Anda tidak dapat kembali ke halaman sebelumnya ketika Anda menekan tombol 'Lanjut' di setiap halaman!
+<br>Tekan tombol 'Lanjut' jika Anda sudah memahami instruksi di atas atau tanyakan kepada peneliti (jika masih bingung)
+melalui WA di https://wa.me/6281288106065. </br>
 <br>
 <br>
   <button id="Lanjut"  class="otree-btn-next btn btn-primary next-button otree-next-button">Lanjut</button>

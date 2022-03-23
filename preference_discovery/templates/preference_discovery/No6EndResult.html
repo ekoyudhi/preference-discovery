@@ -2,16 +2,25 @@
 {% load otree static %}
 
 {% block title %}
-    Hasil Seluruh Ronde
+    Laman Pembayaran
 {% endblock %}
 
 {% block content %}
 
     Terima kasih atas partisipasi Anda. Total poin yang Anda kumpulkan adalah sebanyak <b>{{payoff_selected}}.</b>
     <br>
-    Perhitungan uang yang didapatkan = <b>({{payoff_selected}} x Rp 1.000) + Rp 10.000 = Rp {{payoff_selected_rupiah}}</b>
+    Perhitungan uang yang Anda dapatkan = <b>({{payoff_selected}} x Rp 1.000) + Rp {{show_up_fee}} = Rp {{payoff_selected_rupiah}}</b>
     <br>
-    Anda dipersilakan untuk meninggalkan ruangan ini. Silakan tukarkan kartu peserta Anda dengan pembayaran.
+    Kami telah mencatat semua keputusan, isian kuesioner, dan uang yang Anda peroleh di dalam sistem kami.
+    <br>
+    Kami persilakan Anda untuk menutup laman ini dan kami akan mengirimkan pembayaran maksimal 24 jam dari penyelesaian
+    eksperimen Anda. Anda juga dapat mengkonfirmasi pembayaran ini via WA di http://wa.me/6281288106065 jika Anda merasa
+    belum memperoleh pembayaran atau pembayaran tidak sesuai.
+    <br>
+    <br>
+    Tim Peneliti
+    <br>
+    Yudistira Permana & Muhammad Ryan Sanjaya
 
 {% endblock %}
 
