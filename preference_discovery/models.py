@@ -151,7 +151,7 @@ class Player(BasePlayer):
     s2 = models.IntegerField(choices=[[1,'Laki-laki'],[2,'Perempuan']], label='2) Jenis kelamin')
     s3 = models.IntegerField(choices=[[1,'Diploma 3 (D3)'],[2,'Sarjana (S1/D4)'],[3,'Magister (S2)'],[4,'Doktoral (S3)']], label='3) Tingkat pendidikan yang sedang atau telah ditempuh')
     s4 = models.InteferField(choices=[[1,'Sekolah/Kuliah'],[2,'Lulus belum bekerja'],[3,'Bekerja']], label='4) Aktivitas utama saat ini')
-    s5 = models.InteferField(choices=[[1,'Biologi'],[2,'Farmasi'],[3,'Geografi'],[4,'Kedokteran Gigi'],[5,'Kedokteran Gigi'],[6,'Kedokteran, Kesehatan Masayarakat dan Keperawatan'],[7,'Kehutanan'],[8,'MIPA'],[9,'Pertanian'],[10,'Peternakan'],[11,'Teknik'],[12,'Teknologi Pertanian'],[13,'Ekonomika dan Bisnis'],[14,'Filsafat'],[15,'Hukum'],[16,'Ilmu Budaya'],[17,'Isipol'],[18,'Psikologi'],[19,'Sekolah Vokasi']] label='5) Bidang studi')
+    s5 = models.InteferField(choices=[[1,'Biologi'],[2,'Farmasi'],[3,'Geografi'],[4,'Kedokteran Gigi'],[5,'Kedokteran Gigi'],[6,'Kedokteran, Kesehatan Masayarakat dan Keperawatan']], label='5) Bidang studi')
     s6 = models.IntegerField(choices=[[1,'Di bawah 500.000'],[2,'500.001 s.d 1.000.000'],[3,'1.000.001 s.d 1.500.000'],[4,'1.500.001 s.d 2.000.000'],[5,'2.000.0001 s.d 2.500.000'],[6,'Di atas 2.500.0001']], label='6) Rata-rata pengeluaran setiap bulan')
     s7 = models.IntegerField(choices=[[1,'OVO'],[2,'GoPay'],[3,'ShopeePay'],[4,'Bank Mandiri'],[5,'Bank BNI']], label='7) Metode pembayaran yang diinginkan')
     s8 = models.StringField(label="8) Nomor HP e-money/No Rekening")
