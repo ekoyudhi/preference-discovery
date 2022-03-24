@@ -158,5 +158,3 @@ class Player(BasePlayer):
     s9 = models.IntegerField(choices=[[1,"Tidak Menarik"],[2,"Cukup Menarik"],[3,"Menarik"],[4,"Sangat Menarik"]], label='9) Seberapa menariknya eksperimen ini:')
     
     angka_random = models.IntegerField(min=11, max=99, label="2 digit angka")
-    periode_terpilih = models.IntegerField(initial=0, blank=False)
-    payoff_real = models.FloatField(initial=0, blank=False)
