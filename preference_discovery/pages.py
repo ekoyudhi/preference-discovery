@@ -412,9 +412,6 @@ class No5Result3(Page):
         }
 
 class No6EndQuestionnaire(Page):
-
-    def is_displayed(self):
-        return self.round_number == self.session.config['rounds']
     
     form_model = 'player'
     form_fields = ['s1','s2','s3','s4','s5','s6','s7','s8','s9']
