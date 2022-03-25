@@ -156,5 +156,4 @@ class Player(BasePlayer):
     s7 = models.IntegerField(choices=[[1,'OVO'],[2,'GoPay'],[3,'ShopeePay'],[4,'Bank Mandiri'],[5,'Bank BNI']], label='7) Metode pembayaran yang diinginkan')
     s8 = models.StringField(label="8) Nomor HP e-money/No Rekening")
     s9 = models.IntegerField(choices=[[1,"Tidak Menarik"],[2,"Cukup Menarik"],[3,"Menarik"],[4,"Sangat Menarik"]], label='9) Seberapa menariknya eksperimen ini:')
-    
-    angka_random = models.IntegerField(min=11, max=99, label="2 digit angka")
+   
