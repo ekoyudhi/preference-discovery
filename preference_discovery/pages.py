@@ -417,7 +417,7 @@ class No6EndQuestionnaire(Page):
         return self.round_number == self.session.config['rounds']
     
     form_model = 'player'
-    form_fields = ['s1','s2','s3','s4','s5','s6','s7','s8','s9','s10']
+    form_fields = ['s1','s2','s3','s4','s5','s6','s7','s8','s9']
     
 
 class No6EndResult(Page):
