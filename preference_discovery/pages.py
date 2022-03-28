@@ -412,10 +412,11 @@ class No5Result3(Page):
         }
 
 class No6EndQuestionnaire(Page):
-    
     form_model = 'player'
     form_fields = ['s1','s2','s3','s4','s5','s6','s7','s8','s9']
-    
+
+    def is_displayed(self):
+        return self.round_number == self.session.config['rounds']
 
 class No6EndResult(Page):
 
@@ -455,3 +456,4 @@ page_sequence = [No1Introduction,
                  No5Result3,
                  No6EndQuestionnaire,
                  No6EndResult]
+
