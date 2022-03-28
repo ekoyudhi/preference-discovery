@@ -21,6 +21,11 @@ SESSION_CONFIGS = [
         submit_delay=0,
         rounds=33,
     ),
+    dict(
+        name='kuesioner',
+        display_name='kuesioner',
+        num_demo_participants=1,
+        app_sequence=['kuesioner'],
 ]
 
 # ISO-639 code
