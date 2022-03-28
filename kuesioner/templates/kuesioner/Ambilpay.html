@@ -1,0 +1,19 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Pencairan Pembayaran
+{% endblock %}
+
+{% block content %}
+<p>Terima kasih
+</p>
+
+{{formfield 'angka_random' label='Masukkan dua digit angka dari 11 s.d 99 pada kolom di bawah ini'}}
+<p>Proses ini dilakukan secara random dengan komputerisasi.</p>
+<br>
+<p>Klik 'Submit' untuk memproses</p>
+
+<button class="otree-btn-next btn btn-primary">Submit</button>
+
+{% endblock %}

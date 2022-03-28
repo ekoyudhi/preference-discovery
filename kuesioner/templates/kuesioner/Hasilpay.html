@@ -1,0 +1,54 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+{% block styles %}
+<style type="text/css">
+.payoff {
+    font-size: 1.6vw;
+  }
+</style>
+{% endblock %}
+{% block title %}
+    Hasil Payoff
+{% endblock %}
+
+{% block content %}
+<p>Random payment Anda adalah periode {{player.periode_terpilih}}, dengan total payoff sebesar <b>Rp <span class="payoff" id="payoff_real1"></span> + Rp <span class="payoff">15,000</span> = Rp <span class="payoff" id="payoff_real"></span></b></p>
+
+<p>Yang selanjutnya akan ditransfer ke nomor <span class="payoff" id="metode"></span> : <span class="payoff" id="no_hp">{{player.s17}}</span></p>
+<p>Dana akan ditransfer maksimal 3x24 jam</p>
+
+<p>Terima kasih atas partisipasi Anda</p>
+
+<p>Silahkan screenshot tampilan ini</p>
+<p>Kendala :  http://wa.me/628569041762</p>
+
+<h4>Selesai</h4>
+<script>
+    function thousands_separators(num)
+    {
+        var num_parts = num.toString().split(".");
+        num_parts[0] = num_parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        return num_parts.join(".");
+    }
+
+    if ({{player.payoff_real}}-15000 > 0) {
+        document.getElementById("payoff_real1").textContent = thousands_separators({{player.payoff_real}}-15000)
+        document.getElementById("payoff_real").textContent = thousands_separators({{player.payoff_real}})
+    } else {
+        document.getElementById("payoff_real1").textContent = thousands_separators(0)
+        document.getElementById("payoff_real").textContent = thousands_separators(15000)
+    }
+    var mtd = {{player.s18}}
+    var metode = ""
+    if (mtd == 1) {
+        metode = "OVO";
+    } else if (mtd == 2) {
+        metode = "GOPAY"
+    } else {
+        metode = "ERROR"
+    }
+    document.getElementById("metode").textContent = metode
+
+</script>
+
+{% endblock %}
