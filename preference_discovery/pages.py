@@ -431,9 +431,9 @@ class No6EndResult(Page):
             'player_payoff': self.player.payoff,
             'round_selected' : rnd,
             'payoff_selected' : payoff_selected,
-            'payoff_selected_rupiah' : payoff_selected * 1000 + 5000,
+            'payoff_selected_rupiah' : payoff_selected * 500 + 5000,
             'payoff_all' : payoff_all,
-            'payoff_all_rupiah' : payoff_all * 1000 + 5000,
+            'payoff_all_rupiah' : payoff_all * 500 + 5000,
         }
 
 page_sequence = [No1Introduction,
