@@ -137,7 +137,6 @@ class Player(BasePlayer):
     payoff_thisround = models.IntegerField()
     displayed_lotteries = models.StringField()
     training_round = models.BooleanField()
-    payoff_selected_rupiah = models.IntegerField()
 
     
     Lotere_A = models.IntegerField(min=0, max=10, initial=0)
@@ -161,3 +160,4 @@ class Player(BasePlayer):
     Name = models.StringField(label="Nama Lengkap Anda:")
     Age = models.IntegerField(label="Usia:", min=14, max=35)
     Gender = models.StringField(label="Gender:", choices=["Pria", "Wanita"])
+    payoff_selected_rupiah = models.FloatField(initial=0, blank=False)
