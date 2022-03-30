@@ -137,6 +137,7 @@ class Player(BasePlayer):
     payoff_thisround = models.IntegerField()
     displayed_lotteries = models.StringField()
     training_round = models.BooleanField()
+    payoff_selected_rupiah = models.IntegerField()
 
     
     Lotere_A = models.IntegerField(min=0, max=10, initial=0)
