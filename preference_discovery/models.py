@@ -157,7 +157,5 @@ class Player(BasePlayer):
     s8 = models.StringField(label="8) Nomor HP e-money/No Rekening")
     s9 = models.IntegerField(choices=[[1,"Tidak Menarik"],[2,"Cukup Menarik"],[3,"Menarik"],[4,"Sangat Menarik"]], label='9) Seberapa menariknya eksperimen ini bagi Anda:')
 
-    Name = models.StringField(label="Nama Lengkap Anda:")
-    Age = models.IntegerField(label="Usia:", min=14, max=35)
-    Gender = models.StringField(label="Gender:", choices=["Pria", "Wanita"])
+ 
     payoff_selected_rupiah = models.FloatField(initial=0, blank=False)
