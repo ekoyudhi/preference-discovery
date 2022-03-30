@@ -420,7 +420,7 @@ class No6EndQuestionnaire(Page):
 
 class No6EndResult(Page):
     form_model = 'player'
-    form_fields = ['payoff_selected_rupiah']
+    form_fields = ['payoff_selected','round_selected','payoff_selected_rupiah']
 
     def is_displayed(self):
         return self.round_number == self.session.config['rounds']
