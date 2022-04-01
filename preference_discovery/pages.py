@@ -437,11 +437,11 @@ class No6EndResult(Page):
             'payoff_all' : payoff_all,
             'payoff_all_rupiah' : payoff_all * 500 + 5000,
         }
-    
-#class No7Thanks(Page):
 
- #   def is_displayed(self):
- #      return self.round_number == 1
+class No7Thanks(Page):
+    pass
+
+
 
 page_sequence = [No1Introduction,
                  No2Instructions1,
@@ -463,5 +463,6 @@ page_sequence = [No1Introduction,
                  No5Result3,
                  No6EndQuestionnaire,
                  No6EndResult,
+                 No7Thanks,
                  ]
 
