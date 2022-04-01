@@ -439,7 +439,9 @@ class No6EndResult(Page):
         }
 
 class No7Thanks(Page):
-    pass
+    
+     def is_displayed(self):
+        return self.round_number == 1
 
 
 
