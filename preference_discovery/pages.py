@@ -429,10 +429,6 @@ class No6EndResult(Page):
         rnd = randint(4,33)
         payoff_selected = self.participant.vars['payoff_round_'+str(rnd)]
         payoff_all = self.participant.vars['payoff_round_all']
-        if 'total_payoff_'+str(payoff_selected) in self.participant.vars:
-            payoff_selected_rupiah = self.participant.vars['total_payoff_'+str(payoff_selected)]
-        else:
-            payoff_total = 1000000000
         return {
             'player_payoff': self.player.payoff,
             'round_selected' : rnd,
