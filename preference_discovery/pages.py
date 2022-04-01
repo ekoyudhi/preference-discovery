@@ -439,9 +439,9 @@ class No6EndResult(Page):
         }
     
 class No6End(Page):
-    
+   
     def is_displayed(self):
-        return self.round_number == self.session.config['rounds']
+        return self.round_number == 1
 
 page_sequence = [No1Introduction,
                  No2Instructions1,
