@@ -7,9 +7,9 @@
 
 {% block content %}
 
-    Terima kasih atas partisipasi Anda. Random poin Anda adalah  <b>{{payoff_selected}}</b> yang diperoleh dari ronde <b>{{ formfield 'round_selected' }}.</b>
+    Terima kasih atas partisipasi Anda. Random poin Anda adalah  <b>{{ formfield 'payoff_selected' }}</b> yang diperoleh dari ronde <b>{{ formfield 'round_selected' }}.</b>
     <br>
-    Perhitungan uang yang Anda dapatkan = <b>({{payoff_selected}} x Rp 500) + Rp 5.000 = Rp {{ formfield 'payoff_selected_rupiah' }}</b>
+    Perhitungan uang yang Anda dapatkan = <b>({{ formfield 'payoff_selected' }} x Rp 500) + Rp 5.000 = Rp {{ formfield 'payoff_selected_rupiah' }}</b>
     <br>
     Kami telah mencatat semua keputusan, isian kuesioner, dan uang yang Anda peroleh di dalam sistem kami.
     <br>
