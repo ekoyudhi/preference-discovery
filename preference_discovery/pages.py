@@ -420,7 +420,7 @@ class No6EndQuestionnaire(Page):
 
 class No6EndResult(Page):
     form_model = 'player'
-    form_fields = ['payoff_selected','round_selected','payoff_selected_rupiah']
+  #  form_fields = ['payoff_selected','round_selected','payoff_selected_rupiah']
 
     def is_displayed(self):
         return self.round_number == self.session.config['rounds']
@@ -429,19 +429,6 @@ class No6EndResult(Page):
         rnd = randint(4,33)
         payoff_selected = self.participant.vars['payoff_round_'+str(rnd)]
         payoff_all = self.participant.vars['payoff_round_all']
-        
-        if 'payoff_awal_'+str(round_selected) in self.participant.vars:
-            payoff_awal = self.participant.vars['payoff_awal_'+str(round_selected)]
-        else:
-            payoff_awal = 1000000000
-        if 'total_payoff_'+str(round_selectedh) in self.participant.vars:
-            payoff_all = self.participant.vars['total_payoff_'+str(round_selected)]
-        else:
-            payoff_all = 1000000000
-        if payoff_all <= 0:
-            payoff_selected_rupiah = 5000
-        else:
-            payoff_selected_rupiah = round(5000 + (payoff_all/1000), -3)
         return {
             'player_payoff': self.player.payoff,
             'round_selected' : rnd,
