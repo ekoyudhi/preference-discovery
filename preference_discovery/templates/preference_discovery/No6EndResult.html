@@ -7,9 +7,9 @@
 
 {% block content %}
 
-    Terima kasih atas partisipasi Anda. Random poin Anda adalah  <b>{{formfield 'payoff_selected'}}</b> yang diperoleh dari ronde <b>{{formfield 'round_selected'}}.</b>
+    Terima kasih atas partisipasi Anda. Random poin Anda adalah  <b>{{player.payoff_selected}}</b> yang diperoleh dari ronde <b>{{player.round_selected}}.</b>
     <br>
-    Perhitungan uang yang Anda dapatkan = <b>({{formfield 'payoff_selected'}} x Rp 500) + Rp 5.000 = Rp {{formfield 'payoff_selected_rupiah'}}</b>
+    Perhitungan uang yang Anda dapatkan = <b>({{player.payoff_selected}} x Rp 500) + Rp 5.000 = Rp {{player.payoff_selected_rupiah}}</b>
     <br>
     Kami telah mencatat semua keputusan, isian kuesioner, dan uang yang Anda peroleh di dalam sistem kami.
     <br>
@@ -17,7 +17,23 @@
     <br>
     <p>Tekan tombol 'Selesai' untuk menyelesaikan eksperimen ini.</p>
     <button class="otree-btn-next btn btn-primary">Selesai</button>
+<script>
+    function thousands_separators(num)
+    {
+        var num_parts = num.toString().split(".");
+        num_parts[0] = num_parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        return num_parts.join(".");
+    }
+
+    if ({{player.payoff_selected_rupiah}}-5000 > 0) {
+        document.getElementById("payoff_selected_rupiah1").textContent = thousands_separators({{player.payoff_selected_rupiah}}-5000)
+        document.getElementById("payoff_selected_rupiah").textContent = thousands_separators({{player.payoff_selected_rupiah}})
+    } else {
+        document.getElementById("payoff_selected_rupiah1").textContent = thousands_separators(0)
+        document.getElementById("payoff_selected_rupiah").textContent = thousands_separators(5000)
+    }
     
+</script>
 
 {% endblock %}
 
