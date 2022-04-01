@@ -465,6 +465,5 @@ page_sequence = [No1Introduction,
                  No5Result3,
                  No6EndQuestionnaire,
                  No6EndResult,
-                 No7Thanks,
                  ]
 
