@@ -439,16 +439,9 @@ class No6EndResult(Page):
         }
 
 class No7Thanks(Page):
-    
+
     def is_displayed(self):
         return self.round_number == 1
-
-    def before_next_page(self):
-        self.player.sequence_setup()
-        self.participant.vars['payoff_round_all'] = 0
-
-    #def is_displayed(self):
-    #    return self.round_number == 1
 
 
 
