@@ -7,9 +7,9 @@
 
 {% block content %}
 
-    Terima kasih atas partisipasi Anda. Random poin Anda adalah  <b>{{ form.errors 'payoff_selected' }}</b> yang diperoleh dari ronde <b>{{ form.errors 'round_selected' }}.</b>
+    Terima kasih atas partisipasi Anda. Random poin Anda adalah  <b>{{ formfield_errors 'payoff_selected' }}</b> yang diperoleh dari ronde <b>{{ formfield_errors 'round_selected' }}.</b>
     <br>
-    Perhitungan uang yang Anda dapatkan = <b>({{ form.errors 'payoff_selected' }} x Rp 500) + Rp 5.000 = Rp {{ form.errors 'payoff_selected_rupiah' }}</b>
+    Perhitungan uang yang Anda dapatkan = <b>({{ formfield_errors 'payoff_selected' }} x Rp 500) + Rp 5.000 = Rp {{ formfield_errors 'payoff_selected_rupiah' }}</b>
     <br>
     Kami telah mencatat semua keputusan, isian kuesioner, dan uang yang Anda peroleh di dalam sistem kami.
     <br>
@@ -25,6 +25,14 @@
     document.getElementById("payoff_selected").value = {{payoff_selected}}
     document.getElementById("round_selected").value = {{round_selected}}
     document.getElementById("payoff_selected_rupiah").value = {{payoff_selected_rupiah}}
+    
+    if ({{player.payoff_selected_rupiah}}-5000 > 0) {
+        document.getElementById("payoff_selected").textContent = thousands_separators({{player.payoff_selected_rupiah}}-5000)
+        document.getElementById("payoff_selected_rupiah").textContent = thousands_separators({{player.payoff_selected_rupiah}})
+    } else {
+        document.getElementById("payoff_selected").textContent = thousands_separators(0)
+        document.getElementById("payoff_selected_rupiah").textContent = thousands_separators(5000)
+    }
 
 </script>
 
