@@ -22,7 +22,7 @@ SESSION_CONFIGS = [
         rounds=33,
     ),
         dict(
-        name='preference_discovery',
+        name='preference_discovery_G3',
         display_name='(G3) Preference Discovery',
         num_demo_participants=1,
         app_sequence=['preference_discovery'],
