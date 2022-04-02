@@ -13,7 +13,7 @@ SESSION_CONFIG_DEFAULTS = dict(
 SESSION_CONFIGS = [
     dict(
         name='preference_discovery',
-        display_name='Preference Discovery',
+        display_name='(G1) Preference Discovery',
         num_demo_participants=1,
         app_sequence=['preference_discovery'],
         endowment=3,
@@ -21,6 +21,16 @@ SESSION_CONFIGS = [
         submit_delay=15,
         rounds=33,
     ),
+        dict(
+        name='preference_discovery',
+        display_name='(G3) Preference Discovery',
+        num_demo_participants=1,
+        app_sequence=['preference_discovery'],
+        endowment=6,
+        training_rounds=3,
+        submit_delay=15,
+        rounds=33,
+    ),        
 ]
 
 # ISO-639 code
