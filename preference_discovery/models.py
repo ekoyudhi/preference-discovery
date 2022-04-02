@@ -159,5 +159,5 @@ class Player(BasePlayer):
 
  
     payoff_selected = models.IntegerField(initial=0, blank=False)
-    round_selected = models.IntegerField(min=11, max=99, label="2 digit angka")
+    round_selected = models.IntegerField()
     payoff_selected_rupiah = models.FloatField(initial=0, blank=False)
