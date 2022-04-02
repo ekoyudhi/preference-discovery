@@ -440,8 +440,10 @@ class No6EndResult(Page):
 
 class No7Thanks(Page):
     
-    def is_displayed(self):
-        return self.round_number == 1
+    pass
+
+    #def is_displayed(self):
+    #    return self.round_number == 1
 
 
 
