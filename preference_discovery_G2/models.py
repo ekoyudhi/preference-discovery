@@ -24,7 +24,7 @@ class Constants(BaseConstants):
     players_per_group = None
     num_rounds = 33
     num_training_rounds = 3
-    num_real_rounds_per_session = 10
+    num_real_rounds_per_session = 20
     endowment = c(1000)
     multiplier = 2
     with open('preference_discovery/Lottery.csv', encoding="utf-8") as file:
@@ -77,15 +77,15 @@ class Player(BasePlayer):
             # randomizer untuk Block Latihan
             rand = sample(list(range(0, 20)), 4)
             rand.append(20)
-        if self.round_number >= self.session.config["training_rounds"] + 1 and self.round_number <= self.session.config["training_rounds"] + 10:
+        if self.round_number >= self.session.config["training_rounds"] + 1 and self.round_number <= self.session.config["training_rounds"] + 20:
             # randomizer untuk Block 1 dari index 0 s.d index 20 sesuai csv lotere yang di load
             rand = sample(list(range(0, 20)), 4)
             rand.append(20)
-        elif self.round_number >= self.session.config["training_rounds"] + 1 + 10 and self.round_number <= self.session.config["training_rounds"] + 10 + 10:
+        elif self.round_number >= self.session.config["training_rounds"] + 1 + 20 and self.round_number <= self.session.config["training_rounds"] + 20 + 20:
             # randomizer untuk Block 1 dari index 21 s.d index 41 sesuai csv lotere yang di load
             rand = sample(list(range(0+21, 20+21)), 4)
             rand.append(20+21)
-        elif self.round_number >= self.session.config["training_rounds"] + 1 + 10 + 10 and self.round_number <= self.session.config["training_rounds"] + 10 + 10 + 10:
+        elif self.round_number >= self.session.config["training_rounds"] + 1 + 20 + 20 and self.round_number <= self.session.config["training_rounds"] + 20 + 20 + 20:
             # randomizer untuk Block 1 dari index 42 s.d index 62 sesuai csv lotere yang di load
             rand = sample(list(range(0+21+21, 20+21+21)), 4)
             rand.append(20+21+21)
