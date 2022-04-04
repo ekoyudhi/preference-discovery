@@ -22,7 +22,7 @@ Adaptation of Preference Discovery by Delaney, Jacobson and Moenig (2018) for ri
 class Constants(BaseConstants):
     name_in_url = 'preference_discovery_v2'
     players_per_group = None
-    num_rounds = 33
+    num_rounds = 63
     num_training_rounds = 3
     num_real_rounds_per_session = 20
     endowment = c(1000)
