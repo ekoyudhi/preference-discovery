@@ -79,7 +79,7 @@ class No3Start0(Page):
 class No3Start1(Page):
 
     def is_displayed(self):
-        return self.round_number in [4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+        return self.round_number in [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
 
     def before_next_page(self, **kwargs):
         return {self.player.set_player_param()}
@@ -94,7 +94,7 @@ class No3Start1(Page):
 class No3Start2(Page):
 
     def is_displayed(self):
-        return self.round_number in [14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
+        return self.round_number in [24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43]
 
     def before_next_page(self, **kwargs):
         return {self.player.set_player_param()}
@@ -109,7 +109,7 @@ class No3Start2(Page):
 class No3Start3(Page):
 
     def is_displayed(self):
-        return self.round_number in [24, 25, 26, 27, 28, 29, 30, 31, 32, 33]
+        return self.round_number in [44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 62, 63]
 
     def before_next_page(self, **kwargs):
         return {self.player.set_player_param()}
@@ -170,7 +170,7 @@ class No4Purchase0(Page):
 class No4Purchase1(Page):
 
     def is_displayed(self):       
-       return self.round_number in [4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+       return self.round_number in [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
 
     def vars_for_template(self):
         p = self.participant.vars['displayed_prospects']
@@ -216,7 +216,7 @@ class No4Purchase1(Page):
 class No4Purchase2(Page):
 
     def is_displayed(self):
-        return self.round_number in [14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
+        return self.round_number in [24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43]
 
     def vars_for_template(self):
         p = self.participant.vars['displayed_prospects']
@@ -262,7 +262,7 @@ class No4Purchase2(Page):
 class No4Purchase3(Page):
 
     def is_displayed(self):
-        return self.round_number in [24, 25, 26, 27, 28, 29, 30, 31, 32, 33]
+        return self.round_number in [44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 62, 63]
 
     def vars_for_template(self):
         p = self.participant.vars['displayed_prospects']
@@ -333,7 +333,7 @@ class No5Result0(Page):
 class No5Result1(Page):
 
     def is_displayed(self):
-        return self.round_number in [4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+        return self.round_number in [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
 
     def vars_for_template(self):
         df = self.participant.vars['displayed_prospects'][["x1", "x2", "Allocation", "A_or_B", "payoff"]]
@@ -360,7 +360,7 @@ class No5Result1(Page):
 class No5Result2(Page):
 
     def is_displayed(self):
-        return self.round_number in [14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
+        return self.round_number in [24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43]
 
     def vars_for_template(self):
         df = self.participant.vars['displayed_prospects'][["x1", "x2", "Allocation", "A_or_B", "payoff"]]
@@ -387,7 +387,7 @@ class No5Result2(Page):
 class No5Result3(Page):
 
     def is_displayed(self):
-        return self.round_number in [24, 25, 26, 27, 28, 29, 30, 31, 32, 33]
+        return self.round_number in [44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 62, 63]
 
     def vars_for_template(self):
         df = self.participant.vars['displayed_prospects'][["x1", "x2", "Allocation", "A_or_B", "payoff"]]
