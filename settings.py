@@ -18,7 +18,7 @@ SESSION_CONFIGS = [
         app_sequence=['preference_discovery'],
         endowment=3,
         training_rounds=3,
-        submit_delay=15,
+        submit_delay=0,
         rounds=33,
     ),
     dict(
@@ -28,7 +28,7 @@ SESSION_CONFIGS = [
         app_sequence=['preference_discovery'],
         endowment=3,
         training_rounds=3,
-        submit_delay=15,
+        submit_delay=0,
         rounds=63,
     ),
     dict(
@@ -38,9 +38,19 @@ SESSION_CONFIGS = [
         app_sequence=['preference_discovery'],
         endowment=6,
         training_rounds=3,
-        submit_delay=15,
+        submit_delay=0,
         rounds=33,
-    ),        
+    ),
+    dict(
+        name='preference_discovery_G4',
+        display_name='(G4) Preference Discovery',
+        num_demo_participants=1,
+        app_sequence=['preference_discovery'],
+        endowment=6,
+        training_rounds=3,
+        submit_delay=0,
+        rounds=63,
+    ),
 ]
 
 # ISO-639 code
