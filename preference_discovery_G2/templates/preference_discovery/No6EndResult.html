@@ -1,0 +1,46 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Laman Pembayaran
+{% endblock %}
+
+{% block content %}
+
+    Terima kasih atas partisipasi Anda. Random poin Anda adalah  <b>{{payoff_selected}}</b> yang diperoleh dari ronde <b>{{round_selected}}.</b>
+    <br>
+    Perhitungan uang yang Anda dapatkan = <b>({{payoff_selected}} x Rp 500) + Rp 5.000 = Rp {{payoff_selected_rupiah}}</b>
+    <br>
+    Kami telah mencatat semua keputusan, isian kuesioner, dan uang yang Anda peroleh di dalam sistem kami.
+    <br>
+    <br>
+    <br>
+    Penelitiaan sudah selesai.
+    Kami persilakan Anda untuk menutup laman ini dan kami akan mengirimkan pembayaran maksimal 24 jam dari penyelesaian
+    eksperimen Anda. Anda juga dapat mengkonfirmasi pembayaran ini via WhatsApp di <a href="http://wa.me/6281288106065">http://wa.me/6281288106065<a> jika Anda merasa
+    belum memperoleh pembayaran atau pembayaran tidak sesuai.
+    <br>
+    <br>
+    Tim Peneliti
+    <br>
+    Yudistira Permana, Muhammad Ryan Sanjaya, Anindya Putri
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>Tekan tombol 'Selesai' untuk menyelesaikan eksperimen ini.</p>
+    <input type="hidden" id="payoff_selected" name="payoff_selected" />
+    <input type="hidden" id="round_selected" name="round_selected" />
+    <input type="hidden" id="payoff_selected_rupiah" name="payoff_selected_rupiah" />
+    <button class="otree-btn-next btn btn-primary">Selesai</button>
+
+<script>
+    document.getElementById("payoff_selected").value = {{payoff_selected}}
+    document.getElementById("round_selected").value = {{round_selected}}
+    document.getElementById("payoff_selected_rupiah").value = {{payoff_selected_rupiah}}
+
+</script>
+
+{% endblock %}
+
+
