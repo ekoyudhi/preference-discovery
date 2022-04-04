@@ -21,7 +21,17 @@ SESSION_CONFIGS = [
         submit_delay=15,
         rounds=33,
     ),
-        dict(
+    dict(
+        name='preference_discovery_G2',
+        display_name='(G2) Preference Discovery',
+        num_demo_participants=1,
+        app_sequence=['preference_discovery'],
+        endowment=3,
+        training_rounds=3,
+        submit_delay=15,
+        rounds=63,
+    ),
+    dict(
         name='preference_discovery_G3',
         display_name='(G3) Preference Discovery',
         num_demo_participants=1,
