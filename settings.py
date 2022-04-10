@@ -13,13 +13,43 @@ SESSION_CONFIG_DEFAULTS = dict(
 SESSION_CONFIGS = [
     dict(
         name='preference_discovery',
-        display_name='Preference Discovery',
+        display_name='(G1) Preference Discovery',
         num_demo_participants=1,
         app_sequence=['preference_discovery'],
         endowment=3,
         training_rounds=3,
-        submit_delay=0,
+        submit_delay=15,
         rounds=33,
+    ),
+    dict(
+        name='preference_discovery_G2',
+        display_name='(G2) Preference Discovery',
+        num_demo_participants=1,
+        app_sequence=['preference_discovery_G2'],
+        endowment=3,
+        training_rounds=3,
+        submit_delay=15,
+        rounds=63,
+    ),
+    dict(
+        name='preference_discovery_G3',
+        display_name='(G3) Preference Discovery',
+        num_demo_participants=1,
+        app_sequence=['preference_discovery_G3'],
+        endowment=6,
+        training_rounds=3,
+        submit_delay=15,
+        rounds=33,
+    ),
+    dict(
+        name='preference_discovery_G4',
+        display_name='(G4) Preference Discovery',
+        num_demo_participants=1,
+        app_sequence=['preference_discovery_G4'],
+        endowment=6,
+        training_rounds=3,
+        submit_delay=15,
+        rounds=63,
     ),
 ]
 
@@ -31,7 +61,15 @@ LANGUAGE_CODE = 'en'
 REAL_WORLD_CURRENCY_CODE = 'USD'
 USE_POINTS = True
 
-ROOMS = []
+ROOMS = [
+    dict(
+        name='econ101',
+        display_name='Econ 101 class',
+        participant_label_file='_rooms/econ101.txt',
+        use_secure_urls=True
+    ),
+    dict(name='live_demo', display_name='Room for live demo'),
+]
 
 ADMIN_USERNAME = 'admin'
 # for security, best to set admin password in an environment variable
